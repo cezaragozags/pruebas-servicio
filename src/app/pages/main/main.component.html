@@ -1,0 +1,8 @@
+<!-- Presenta el botón verde con el signo de + -->
+<app-add-button [modalID]="newImageModalId"></app-add-button>
+
+<!-- Presenta las imágenes almacenadas en el localStorage -->
+<app-img-container [images]="imgArray" (reloadImgs)="ngOnInit()"></app-img-container>
+
+<!-- En caso de dar clic en el botón del signo de + se manda llamar el modal con el formulario que está en el componente app-newimage -->
+<app-newimage-form [modalID]="newImageModalId" (reloadImg)="ngOnInit()"></app-newimage-form>
