@@ -1,1 +1,16 @@
-<p>img-container works!</p>
+<div class="row row-cols-1 row-cols-md-6 g-4">
+    @for (img of images; track img.id_image) {
+      <div class="col">
+        <div class="card">
+          <img [src]="img.src" class="card-img-top" [alt]="img.name || 'Imagen'" />
+          <div class="card-body">
+            <h6 class="card-title">{{img.name}}</h6>
+            <div class="button-group">
+              <button type="button" class="btn btn-primary button">Ver</button>
+              <button type="button" class="btn btn-danger button" (click)="deleteImage(img.id_image)">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+</div> 

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-add-button',
@@ -7,6 +7,11 @@ import { Component, Input } from '@angular/core';
   styleUrl: './add-button.component.css'
 })
 export class AddButtonComponent {
-  @Input() modalID!:number; //recibe su valor del componente padre que es el componente main//
+  @Input() modalID!:number; 
+  @Output() open = new EventEmitter<void>();
+
+  onClick(): void {
+    this.open.emit();
+  }
 
 }

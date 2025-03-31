@@ -31,7 +31,7 @@ export class ImgService {
   saveImage(name:string, src:string):void{
     let images = this.getImages();
     const newImage: Image={
-      id_image: images.length>0 ? images[images.length-1].id_image + 1 :1,
+      id_image: images.length> 0 ? images[images.length-1].id_image + 1 :1,
       name,
       src
     };
@@ -39,9 +39,9 @@ export class ImgService {
     localStorage.setItem(this.storageKey,JSON.stringify(images));
   }
 
-  deleteImageByID(id_image:number):void{
+  deleteImageID(id_image:number):void{
     let images= this.getImages();
-    images=images.filter(img=>img.id_image!==id_image)
+    images=images.filter(img=>img.id_image!== id_image)
     localStorage.setItem(this.storageKey, JSON.stringify(images));
   }
 

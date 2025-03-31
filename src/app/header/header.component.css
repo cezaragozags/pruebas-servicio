@@ -1,0 +1,33 @@
+.header-prin{
+  display: flex;
+  height: 50px;
+  background-color: #f8f9fa;
+  width: auto;
+  padding: 0px 10px 10px 10px;
+}
+
+.logo{
+  padding-top: 5px;
+}
+
+h1{
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  margin-right: 28px;
+}
+.menu-sec{
+  padding: 13px;
+  display: flex;
+  width: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h3{
+  font-size: 23px;
+  font-weight: lighter;
+  color: black;
+  padding-right: 40px;
+  margin-top: 20px;
+}
